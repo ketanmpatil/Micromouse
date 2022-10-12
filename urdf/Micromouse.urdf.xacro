@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"
+  name="Micromouse">
+  <xacro:include filename="$(find Micromouse)/urdf/plugins.gazebo"/>
+  
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.000940759856564177 -5.55111512312578E-17 0.00218640701823889"
+        rpy="0 0 0" />
+      <mass
+        value="0.0235966095654301" />
+      <inertia
+        ixx="7.08034768833909E-06"
+        ixy="-7.14992103366553E-21"
+        ixz="7.38584719236722E-08"
+        iyy="1.30407206907464E-05"
+        iyz="4.68497300087532E-22"
+        izz="1.98432373960643E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Micromouse/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Micromouse/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_wheel_link">
+    <inertial>
+      <origin
+        xyz="2.23662070530928E-08 -0.00579226687615948 2.00590607843561E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.00459134161464123" />
+      <inertia
+        ixx="4.32015068101083E-07"
+        ixy="-4.33374415053016E-13"
+        ixz="-2.4321157077044E-13"
+        iyy="6.68585408374072E-07"
+        iyz="-3.88670448858445E-13"
+        izz="4.32015121162766E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Micromouse/meshes/left_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Micromouse/meshes/left_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.00507915897555939 0.0438257569495585 0.00749999999999996"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_wheel_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="right_wheel_link">
+    <inertial>
+      <origin
+        xyz="1.80147178251155E-08 0.00579226687615944 -2.42705773256802E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.00459134161464123" />
+      <inertia
+        ixx="4.32015169308896E-07"
+        ixy="3.4310405428802E-13"
+        ixz="2.32978762352935E-13"
+        iyy="6.68585408374072E-07"
+        iyz="-4.70274079027024E-13"
+        izz="4.32015019954954E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Micromouse/meshes/right_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.647058823529412 0.619607843137255 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Micromouse/meshes/right_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.00507915907051316 -0.0438257569495584 0.0075"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_wheel_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="ir_front_link">
+    <inertial>
+      <origin
+        xyz="0 -1.38777878078145E-17 -0.004"
+        rpy="0 0 0" />
+      <mass
+        value="0.00142612385965949" />
+      <inertia
+        ixx="6.77184163750294E-08"
+        ixy="1.59010716640219E-25"
+        ixz="-4.41162993361615E-25"
+        iyy="1.46758226901553E-08"
+        iyz="-4.41162993361615E-25"
+        izz="6.71822512288168E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Micromouse/meshes/ir_front_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Micromouse/meshes/ir_front_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ir_front_joint"
+    type="fixed">
+    <origin
+      xyz="0.0409208410244407 0 0.008"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="ir_front_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="ir_left_link">
+    <inertial>
+      <origin
+        xyz="-1.73472347597681E-18 0 -0.004"
+        rpy="0 0 0" />
+      <mass
+        value="0.00142612385965949" />
+      <inertia
+        ixx="1.46758226901553E-08"
+        ixy="-7.59044967803373E-25"
+        ixz="-4.10143720390875E-25"
+        iyy="6.77184163750295E-08"
+        iyz="-4.87982457176779E-26"
+        izz="6.71822512288168E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 -1.57" />
+      <geometry>
+        <mesh
+          filename="package://Micromouse/meshes/ir_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Micromouse/meshes/ir_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ir_left_joint"
+    type="fixed">
+    <origin
+      xyz="0.0302450629402907 0.0418257569495585 0.008"
+      rpy="0 0 1.57" />
+    <parent
+      link="base_link" />
+    <child
+      link="ir_left_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="ir_right_link">
+    <inertial>
+      <origin
+        xyz="1.56125112837913E-17 2.77555756156289E-17 -0.004"
+        rpy="0 0 0" />
+      <mass
+        value="0.00142612385965949" />
+      <inertia
+        ixx="1.46758226901553E-08"
+        ixy="2.2497267567896E-25"
+        ixz="-2.48480272739894E-24"
+        iyy="6.77184163750295E-08"
+        iyz="2.80078449853053E-25"
+        izz="6.71822512288169E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 1.57" />
+      <geometry>
+        <mesh
+          filename="package://Micromouse/meshes/ir_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Micromouse/meshes/ir_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ir_right_link"
+    type="fixed">
+    <origin
+      xyz="0.0302450629402908 -0.0418257569495584 0.008"
+      rpy="0 0 -1.57" />
+    <parent
+      link="base_link" />
+    <child
+      link="ir_right_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="imu_link">
+    <visual>
+      <origin
+        xyz="0.01 0 0"
+        rpy="0 0 1.57" />
+       <geometry>
+        <box size="0.01 0.01 0.01"/>
+       </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="imu_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="imu_link"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </joint>
+</robot>
